@@ -27,8 +27,8 @@ layers:
   - J
   - K
   - L
-  - '&td1'
-  - {t: '''', s: '"'}
+  - {t: ;, h: '$$mdi:arrow-up-bold$$', s: ':'}
+  - {t: ':', h: '-'}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - Z
@@ -40,9 +40,9 @@ layers:
   - B
   - N
   - M
-  - {t: ., s: '>'}
-  - {t: /, s: '?'}
-  - $$mdi:keyboard-esc$$
+  - {t: ',', h: '$$mdi:arrow-left-bold$$', s: <}
+  - {t: ., h: '$$mdi:arrow-down-bold$$'}
+  - {t: /, h: '$$mdi:arrow-right-bold$$', s: '?'}
   - {t: '$$mdi:keyboard-esc$$', h: '5'}
   - {t: '$$mdi:backspace$$', h: NUMBER}
   - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
