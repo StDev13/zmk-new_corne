@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
-  - $$mdi:keyboard-tab$$
+  - {t: '$$mdi:keyboard-tab$$', h: LEFT WIN}
   - Q
   - W
   - E
@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:backspace$$', h: Gui+/}
   - $$mdi:apple-keyboard-shift$$
   - A
   - S
@@ -27,8 +27,8 @@ layers:
   - J
   - K
   - L
-  - {t: ;, h: '$$mdi:arrow-up-bold$$', s: ':'}
-  - {t: ':', h: '-'}
+  - {t: '$$mdi:arrow-up-bold$$', h: ;}
+  - {t: '-', h: ':', s: _}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - Z
@@ -40,10 +40,10 @@ layers:
   - B
   - N
   - M
-  - {t: ',', h: '$$mdi:arrow-left-bold$$', s: <}
-  - {t: ., h: '$$mdi:arrow-down-bold$$'}
-  - {t: /, h: '$$mdi:arrow-right-bold$$', s: '?'}
-  - {t: '$$mdi:keyboard-esc$$', h: Bluetooth}
+  - {t: '$$mdi:arrow-left-bold$$', h: ','}
+  - {t: '$$mdi:arrow-down-bold$$', h: .}
+  - {t: '$$mdi:arrow-right-bold$$', h: /}
+  - '&td3'
   - {t: '$$mdi:backspace$$', h: NUMBER}
   - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
   - {t: '$$mdi:keyboard-return$$', h: Fn}
@@ -77,21 +77,21 @@ layers:
   - {t: Sft+8, s: Sft+*}
   - {t: Sft+9, s: Sft+(}
   - {t: Sft+0, s: Sft+)}
-  - PG UP
+  - '!'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - RGB ON
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - RGB EFF
+  - '~'
+  - {t: '`', s: '~'}
+  - '{'
+  - '}'
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - RGB EFR
-  - RGB SPI
-  - RGB BRI
-  - RGB BRD
+  - ^
+  - '@'
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
   - .
-  - PG DN
+  - '?'
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -246,7 +246,7 @@ layers:
   - {t: '0', s: )}
   - {t: ., s: '>', type: held}
   Bluetooth:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:bluetooth-off$$
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
@@ -288,7 +288,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
