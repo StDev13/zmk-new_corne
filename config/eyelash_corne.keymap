@@ -27,16 +27,19 @@
 
 / {
     behaviors {
-        td0: td0 {
+        td3: td3 {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+            bindings = <&lt 4 ESCAPE>, <&lt 5 ESCAPE>, <&tog 4>;
+
+            label = "tap dance";
+            tapping-term-ms = <150>;
         };
 
         th: th {
             compatible = "zmk,behavior-hold-tap";
-            label = "TH";
+            label = "Tap and hold";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -64,10 +67,10 @@
         Main {
             display-name = "QWERTY";
             bindings = <
-&kp TAB         &kp Q         &kp W  &kp E         &kp R            &kp T                               &kp UP                &kp Y        &kp U            &kp I         &kp O           &kp P                   &kp BSPC
-&kp LEFT_SHIFT  &kp A         &kp S  &kp D         &kp F            &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J            &kp K         &kp L           &th UP_ARROW SEMICOLON  &th MINUS COLON
-&kp LCTRL       &kp LEFT_ALT  &kp Z  &kp X         &kp C            &kp V        &kp SPACE              &kp DOWN              &kp B        &kp N            &kp M         &th LEFT COMMA  &th DOWN PERIOD         &th RIGHT SLASH
-                                     &lt 5 ESCAPE  &lt 1 BACKSPACE  &lt 2 SPACE                                               &lt 3 ENTER  &lt 1 BACKSPACE  &lt 4 ESCAPE
+&th LEFT_WIN TAB  &kp Q         &kp W  &kp E  &kp R            &kp T                               &kp UP                &kp Y        &kp U            &kp I         &kp O           &kp P                   &th RG(SLASH) BACKSPACE
+&kp LEFT_SHIFT    &kp A         &kp S  &kp D  &kp F            &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J            &kp K         &kp L           &th SEMICOLON UP_ARROW  &th COLON MINUS
+&kp LCTRL         &kp LEFT_ALT  &kp Z  &kp X  &kp C            &kp V        &kp SPACE              &kp DOWN              &kp B        &kp N            &kp M         &th COMMA LEFT  &th PERIOD DOWN         &th SLASH RIGHT
+                                       &td3   &lt 1 BACKSPACE  &lt 2 SPACE                                               &lt 3 ENTER  &lt 1 BACKSPACE  &lt 4 ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -76,10 +79,10 @@
         Number {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp N1            &kp N2            &kp N3      &kp N4      &kp N5                                         &mmv MOVE_UP                     &kp N6            &kp N7            &kp N8           &kp N9           &kp N0      &kp DEL
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(N8)       &kp LS(N9)       &kp LS(N0)  &kp PG_UP
-&trans  &trans            &rgb_ug RGB_ON    &trans      &trans      &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR   &rgb_ug RGB_SPI   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp PERIOD  &kp PG_DN
-                                            &trans      &trans      &trans                                                                          &trans            &trans            &trans
+&trans  &kp N1            &kp N2            &kp N3      &kp N4          &kp N5                                         &mmv MOVE_UP                     &kp N6            &kp N7            &kp N8            &kp N9             &kp N0      &kp DEL
+&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)      &kp LS(N5)                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(N8)        &kp LS(N9)         &kp LS(N0)  &kp EXCLAMATION
+&trans  &trans            &kp TILDE         &kp GRAVE   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp CARET         &kp AT            &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERIOD  &kp QUESTION
+                                            &trans      &trans          &trans                                                                          &trans            &trans            &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -120,10 +123,10 @@
 
         Bluetooth {
             bindings = <
-&none      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &none         &none  &none  &none  &none  &none  &none
-&none      &none         &none         &none         &none         &none                    &none  &none  &none  &none  &none  &none  &none  &none  &none
-&soft_off  &none         &none         &none         &none         &bt BT_CLR_ALL  &none           &none         &none  &none  &none  &none  &none  &none
-                                       &none         &none         &none                                         &none  &none  &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &none         &none  &none  &none  &none  &none  &none
+&none       &none         &none         &none         &none         &none                    &none  &none  &none  &none  &none  &none  &none  &none  &none
+&soft_off   &none         &none         &none         &none         &bt BT_CLR_ALL  &none           &none         &none  &none  &none  &none  &none  &none
+                                        &none         &none         &none                                         &none  &none  &none
             >;
         };
 
