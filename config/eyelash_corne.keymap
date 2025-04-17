@@ -102,10 +102,10 @@
         Function {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp F1  &kp F2   &kp F3   &kp F4          &kp F5                                      &mmv MOVE_UP                     &kp PAGE_UP    &none           &kp UP_ARROW  &none      &kp HOME  &kp BSPC
-&trans  &kp F6  &kp F7   &kp F8   &kp F9          &kp F10                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp END   &none
-&trans  &trans  &kp F11  &kp F12  &kp INT_HENKAN  &kp INT_MUHENKAN  &trans                    &mmv MOVE_DOWN                   &none          &none           &kp SPACE     &none      &none     &none
-                         &trans   &trans          &trans                                                                       &trans         &trans          &trans
+&trans  &kp F1  &kp F2   &kp F3   &kp F4         &kp F5                                       &mmv MOVE_UP                     &kp PAGE_UP    &none           &kp UP_ARROW  &none      &kp HOME  &kp BSPC
+&trans  &kp F6  &kp F7   &kp F8   &kp F9         &kp F10                      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp END   &none
+&trans  &trans  &kp F11  &kp F12  &kp LC(SPACE)  &kp LC(LS(SPACE))  &trans                    &mmv MOVE_DOWN                   &none          &none           &kp SPACE     &none      &none     &none
+                         &trans   &trans         &trans                                                                        &trans         &trans          &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
