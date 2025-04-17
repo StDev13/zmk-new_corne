@@ -32,6 +32,14 @@ config BOARD_ENABLE_DCDC_HV
 config ZMK_SLEEP
     default y
 
+CONFIG_ZMK_PM_SOFT_OFF
+    default y
+
+CONFIG_ZMK_SLEEP
+    default y
+
+CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=900000
+
 config ZMK_SPLIT
     default y
 
