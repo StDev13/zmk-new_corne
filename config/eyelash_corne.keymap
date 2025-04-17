@@ -56,6 +56,15 @@
             quick-tap-ms = <160>;
             hold-trigger-key-positions = <33 32 18 17 16 15 14 1 2 3 5 4 30 23 24 9 25 31>;
         };
+
+        tdQ: tdQ {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDQ";
+            #binding-cells = <0>;
+            bindings = <&kp Q>, <&th PIPE INT_YEN>;
+
+            tapping-term-ms = <180>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
