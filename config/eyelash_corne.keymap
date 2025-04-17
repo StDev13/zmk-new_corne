@@ -54,7 +54,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <120>;
             quick-tap-ms = <160>;
-            hold-trigger-key-positions = <33 32 18 17 16 15 14 1 2 3 5 4 29 30 23 24 9 25>;
+            hold-trigger-key-positions = <33 32 18 17 16 15 14 1 2 3 5 4 30 23 24 9 25 31>;
         };
     };
 
@@ -91,7 +91,7 @@
             display-name = "NUMBER";
             bindings = <
 &trans  &kp N1            &kp N2            &kp N3      &kp N4          &kp N5                                         &mmv MOVE_UP                     &kp N6            &kp N7            &kp N8            &kp N9             &kp N0      &kp DEL
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)      &kp LS(N5)                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(N8)        &kp LS(N9)         &kp PIPE    &kp EXCLAMATION
+&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)      &kp LS(N5)                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(N8)        &kp LS(N9)         &kp LS(N0)  &kp EXCLAMATION
 &trans  &trans            &kp TILDE         &kp GRAVE   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp CARET         &kp AT            &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERIOD  &kp QUESTION
                                             &trans      &trans          &trans                                                                          &trans            &trans            &trans
             >;
@@ -114,8 +114,8 @@
         Mouse {
             display-name = "Fn";
             bindings = <
-&trans  &none   &none  &none        &none   &none                                 &mmv MOVE_UP                     &msc MOVE_Y(5)   &mkp MB1         &mmv MOVE_UP    &mkp MB2         &none  &none
-&trans  &none   &none  &none        &none   &none                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &msc MOVE_Y(-5)  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
+&trans  &none   &none  &none        &none   &none                                 &mmv MOVE_UP                     &kp PAGE_UP      &mkp MB1         &mmv MOVE_UP    &mkp MB2         &none  &none
+&trans  &none   &none  &none        &none   &none                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PAGE_DOWN    &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
 &trans  &trans  &none  &bootloader  &none   &none   &kp C_MUTE                    &mmv MOVE_DOWN                   &th LC(R) SPACE  &kp LS(LC(TAB))  &mkp MB3        &kp LC(TAB)      &none  &none
                        &trans       &trans  &trans                                                                 &trans           &trans           &trans
             >;
