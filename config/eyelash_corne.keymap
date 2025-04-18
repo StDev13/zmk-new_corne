@@ -99,10 +99,10 @@
         Number {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp N1            &kp N2            &kp N3      &kp N4          &kp N5                                         &mmv MOVE_UP                     &kp N6            &kp N7            &kp N8            &kp N9             &kp N0      &kp DEL
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)      &kp LS(N5)                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(N8)        &kp LS(N9)         &kp LS(N0)  &kp EXCLAMATION
-&trans  &trans            &kp TILDE         &kp GRAVE   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp CARET         &kp AT            &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERIOD  &kp QUESTION
-                                            &trans      &trans          &trans                                                                          &trans            &trans            &trans
+&trans  &kp N1            &kp N2            &kp N3      &kp N4          &kp N5                                         &mmv MOVE_UP                     &kp N6             &kp N7            &kp N8            &kp N9             &kp N0      &kp DEL
+&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)      &kp LS(N5)                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LS(NUMBER_6)   &kp LS(NUMBER_7)  &kp LS(N8)        &kp LS(N9)         &kp LS(N0)  &kp EXCLAMATION
+&trans  &trans            &kp TILDE         &kp GRAVE   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp DOUBLE_QUOTES  &kp AT            &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERIOD  &kp QUESTION
+                                            &trans      &trans          &trans                                                                          &trans             &trans            &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
