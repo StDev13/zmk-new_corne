@@ -61,7 +61,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TDQ";
             #binding-cells = <0>;
-            bindings = <&kp Q>, <&th PIPE INT_YEN>;
+            bindings = <&kp Q>, <&th PIPE BACKSLASH>;
 
             tapping-term-ms = <180>;
         };
