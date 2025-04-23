@@ -6,6 +6,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -34,7 +35,7 @@
             bindings = <&thl2 4 ESCAPE>, <&thl2 5 ESCAPE>, <&tog 4>;
 
             label = "tap dance";
-            tapping-term-ms = <180>;
+            tapping-term-ms = <200>;
         };
 
         th: th {
@@ -130,10 +131,10 @@
         Number {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp N1            &kp N2            &kp N3      &kp N4          &kp N5                                         &mmv MOVE_UP                     &kp N6             &kp N7            &kp N8            &kp N9             &kp N0      &kp DEL
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)      &kp LS(N5)                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LS(NUMBER_6)   &kp LS(NUMBER_7)  &kp LS(N8)        &kp LS(N9)         &kp LS(N0)  &kp EXCLAMATION
-&trans  &trans            &kp TILDE         &kp GRAVE   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp DOUBLE_QUOTES  &kp AT            &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERIOD  &kp QUESTION
-                                            &trans      &trans          &trans                                                                          &trans             &trans            &trans
+&trans  &kp N1            &kp N2            &kp N3      &kp N4          &kp N5                                         &mmv MOVE_UP                     &kp N6                              &kp N7            &kp N8            &kp N9             &kp N0      &kp DEL
+&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)      &kp LS(N5)                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LS(NUMBER_6)                    &kp LS(NUMBER_7)  &kp LS(N8)        &kp LS(N9)         &kp LS(N0)  &kp EXCLAMATION
+&trans  &trans            &kp TILDE         &kp GRAVE   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp C_MUTE                    &mmv MOVE_DOWN                   &th LS(SINGLE_QUOTE) DOUBLE_QUOTES  &kp AT            &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERIOD  &kp QUESTION
+                                            &trans      &trans          &trans                                                                          &trans                              &trans            &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -174,10 +175,10 @@
 
         Bluetooth {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &none         &none  &none  &none  &none  &none  &none
-&none       &none         &none         &none         &none         &none                    &none  &none  &none  &none  &none  &none  &none  &none  &none
-&soft_off   &none         &none         &none         &none         &bt BT_CLR_ALL  &none           &none         &none  &none  &none  &none  &none  &none
-                                        &none         &none         &none                                         &none  &none  &none
+&none         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &none         &none  &none  &none  &none  &none  &none
+&none         &none         &none         &none         &none         &none                    &none  &none  &none  &none  &none  &none  &none  &none  &none
+&out OUT_BLE  &out OUT_USB  &none         &none         &none         &bt BT_CLR_ALL  &none           &none         &none  &none  &none  &none  &none  &none
+                                          &none         &none         &none                                         &none  &none  &none
             >;
         };
 
