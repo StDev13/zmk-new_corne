@@ -155,8 +155,8 @@
         Mouse {
             display-name = "Fn";
             bindings = <
-&trans  &none   &none  &none        &none   &none                                 &mmv MOVE_UP                     &kp PAGE_UP      &mkp MB1         &mmv MOVE_UP    &mkp MB2         &none  &none
-&trans  &none   &none  &none        &none   &none                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PAGE_DOWN    &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
+&trans  &none   &none  &none        &none   &none                                 &mmv MOVE_UP                     &msc SCRL_UP     &mkp MB1         &mmv MOVE_UP    &mkp MB2         &none  &none
+&trans  &none   &none  &none        &none   &none                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &msc SCRL_DOWN   &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
 &trans  &trans  &none  &bootloader  &none   &none   &kp C_MUTE                    &mmv MOVE_DOWN                   &th LC(R) SPACE  &kp LS(LC(TAB))  &mkp MB3        &kp LC(TAB)      &none  &kp LC(W)
                        &trans       &trans  &trans                                                                 &trans           &trans           &trans
             >;
