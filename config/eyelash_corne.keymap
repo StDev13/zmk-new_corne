@@ -93,7 +93,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD2";
             #binding-cells = <0>;
-            bindings = <&th LSHFT LS(ESC)>, <&kp LCTRL>;
+            bindings = <&th LSHFT ESC>, <&kp LCTRL>;
 
             tapping-term-ms = <200>;
         };
@@ -116,9 +116,21 @@
     combos {
         compatible = "zmk,combos";
 
-        main-ios-toggle {
-            bindings = <&tog 6>;
-            key-positions = <5 18 7 22>;
+        toMain {
+            bindings = <&to 0>;
+            key-positions = <7 4 5 8>;
+            layers = <0>;
+        };
+
+        toiOS {
+            bindings = <&to 6>;
+            key-positions = <17 18 22 23>;
+            layers = <0>;
+        };
+
+        toTenkey {
+            bindings = <&to 4>;
+            key-positions = <32 33 36 37>;
         };
     };
 
@@ -194,10 +206,10 @@
         iOS {
             display-name = "QWERTY";
             bindings = <
-&th LEFT_WIN TAB  &tdQ          &kp W  &kp E  &kp R              &kp T                                &kp UP                &kp Y          &kp U              &kp I           &kp O            &kp P                    &thc RG(SLASH) BACKSPACE
-&kp LEFT_SHIFT    &kp A         &kp S  &kp D  &kp F              &kp G                      &kp LEFT  &kp ENTER  &kp RIGHT  &kp H          &kp J              &kp K           &kp L            &thc SEMICOLON UP_ARROW  &th COLON MINUS
-&kp LCTRL         &kp LEFT_ALT  &kp Z  &kp X  &kp C              &kp V         &kp SPACE              &kp DOWN              &kp B          &kp N              &kp M           &thc COMMA LEFT  &thc PERIOD DOWN         &thc SLASH RIGHT
-                                       &td3   &thl2 1 BACKSPACE  &thl 2 SPACE                                               &thl2 3 ENTER  &thl2 1 BACKSPACE  &thl2 4 ESCAPE
+&th LCTRL TAB   &tdQ          &kp W  &kp E  &kp R              &kp T                                &kp UP                &kp Y          &kp U              &kp I           &kp O            &kp P                    &thc RG(SLASH) BACKSPACE
+&kp LEFT_SHIFT  &kp A         &kp S  &kp D  &kp F              &kp G                      &kp LEFT  &kp ENTER  &kp RIGHT  &kp H          &kp J              &kp K           &kp L            &thc SEMICOLON UP_ARROW  &th COLON MINUS
+&kp LEFT_GUI    &kp LEFT_ALT  &kp Z  &kp X  &kp C              &kp V         &kp SPACE              &kp DOWN              &kp B          &kp N              &kp M           &thc COMMA LEFT  &thc PERIOD DOWN         &thc SLASH RIGHT
+                                     &td3   &thl2 1 BACKSPACE  &thl 2 SPACE                                               &thl2 3 ENTER  &thl2 1 BACKSPACE  &thl2 4 ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
