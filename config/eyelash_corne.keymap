@@ -121,10 +121,10 @@
         Main {
             display-name = "QWERTY";
             bindings = <
-&th LEFT_WIN TAB  &tdQ          &kp W  &kp E  &kp R              &kp T                                &kp UP                &kp Y          &kp U              &kp I  &kp O            &kp P                    &thc RG(SLASH) BACKSPACE
-&kp LEFT_SHIFT    &kp A         &kp S  &kp D  &kp F              &kp G                      &kp LEFT  &kp ENTER  &kp RIGHT  &kp H          &kp J              &kp K  &kp L            &thc SEMICOLON UP_ARROW  &th COLON MINUS
-&kp LCTRL         &kp LEFT_ALT  &kp Z  &kp X  &kp C              &kp V         &kp SPACE              &kp DOWN              &kp B          &kp N              &kp M  &thc COMMA LEFT  &thc PERIOD DOWN         &thc SLASH RIGHT
-                                       &td3   &thl2 2 BACKSPACE  &thl 3 SPACE                                               &thl2 4 ENTER  &thl2 2 BACKSPACE  &td2
+&th LEFT_WIN TAB  &tdQ          &kp W  &kp E  &kp R              &kp T                                &kp UP                &kp Y          &kp U              &kp I              &kp O            &kp P                    &thc RG(SLASH) BACKSPACE
+&kp LEFT_SHIFT    &kp A         &kp S  &kp D  &kp F              &kp G                      &kp LEFT  &kp ENTER  &kp RIGHT  &kp H          &kp J              &kp K              &kp L            &thc SEMICOLON UP_ARROW  &th COLON MINUS
+&kp LCTRL         &kp LEFT_ALT  &kp Z  &kp X  &kp C              &kp V         &kp SPACE              &kp DOWN              &kp B          &kp N              &kp M              &thc COMMA LEFT  &thc PERIOD DOWN         &thc SLASH RIGHT
+                                       &td3   &thl2 2 BACKSPACE  &thl 3 SPACE                                               &thl2 4 ENTER  &thl2 2 BACKSPACE  &th RSHIFT ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -145,10 +145,10 @@
         Number {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp N1            &kp N2            &kp N3      &kp N4          &kp N5                                         &mmv MOVE_UP                     &kp N6                              &kp N7            &kp N8            &kp N9             &kp N0      &kp DEL
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)      &kp LS(N5)                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LS(NUMBER_6)                    &kp LS(NUMBER_7)  &kp LS(N8)        &kp LS(N9)         &kp LS(N0)  &kp EXCLAMATION
-&trans  &trans            &kp TILDE         &kp GRAVE   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp C_MUTE                    &mmv MOVE_DOWN                   &th LS(SINGLE_QUOTE) DOUBLE_QUOTES  &kp AT            &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERIOD  &kp QUESTION
-                                            &trans      &trans          &trans                                                                          &trans                              &trans            &trans
+&trans  &kp N1            &kp N2            &kp N3      &kp N4          &kp N5                                         &mmv MOVE_UP                     &kp N6                          &kp N7            &kp N8            &kp N9             &kp N0      &kp DEL
+&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)      &kp LS(N5)                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LS(NUMBER_6)                &kp LS(NUMBER_7)  &kp LS(N8)        &kp LS(N9)         &kp LS(N0)  &kp EXCLAMATION
+&trans  &trans            &kp TILDE         &kp GRAVE   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp C_MUTE                    &mmv MOVE_DOWN                   &th SINGLE_QUOTE DOUBLE_QUOTES  &kp AT            &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERIOD  &kp QUESTION
+                                            &trans      &trans          &trans                                                                          &trans                          &trans            &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
